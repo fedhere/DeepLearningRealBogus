@@ -1,0 +1,230 @@
+\documentclass[fleqn,usenatbib]{mnras}
+% \documentclass[linenumbers, twocolumn],
+%a4paper 10pt]{aastex63}
+\usepackage{float}
+\usepackage[switch]{lineno}
+% Depending on your LaTeX fonts installation, you might get better results with one of these:
+%\usepackage{mathptmx}
+%\usepackage{txfonts}
+\usepackage{cancel}
+% Use vector fonts, so it zooms properly in on-screen viewing software
+% Don't change these lines unless you know what you are doing
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\usepackage{tabularx}
+    \newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\usepackage{placeins}
+\usepackage{float}
+
+\usepackage{graphicx,epstopdf}
+\epstopdfsetup{suffix=}
+\DeclareGraphicsExtensions{.ps}
+\DeclareGraphicsRule{.ps}{pdf}{.pdf}{`ps2pdf -dEPSCrop -dNOSAFER #1 \noexpand\OutputFile}
+
+\usepackage{amsmath}	% Advanced maths commands
+\usepackage{amssymb}	% Extra maths symbols
+\usepackage{mathtools}
+\usepackage{longtable}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{adjustbox}
+\usepackage{multirow}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\usepackage{hyperref}
+
+
+\usepackage{newtxtext,newtxmath}
+% \documentclass{article}
+%\usepackage[square,numbers]{natbib}
+% \bibliographystyle{abbrvnat}
+% \bibliographystyle{unsrt}
+% \bibliographystyle{habbrv}
+\usepackage{graphicx}%Include figure files
+\usepackage{mathtools}
+\usepackage{ulem}
+\usepackage{scrextend}
+\usepackage{caption}
+\usepackage{chngcntr}
+\definecolor{mygreen}{RGB}{25, 196, 139}
+% \usepackage[dvipsnames]{xcolor}
+% \usepackage{multicol}
+
+% \usepackage{caption}
+%\usepackage{longtable}
+%\usepackage{subcaption}
+% easy way to highlight new stuff
+
+\newcommand{\tatiana}[1]{{\color{orange} #1}}
+\newcommand{\ggd}[1]{{\color{violet}\bf (GGD: #1)}}
+\newcommand{\greg}[1]{{\color{violet} #1}}
+\newcommand{\fed}[1]{{\color{orange} #1}}
+\newcommand{\helen}[1]{{\color{magenta} #1}}
+\newcommand{\masao}[1]{{\color{green} #1}}
+\newcommand{\diff}{{\it diff}}
+
+\newcommand{\nodia}{{\it noDIA}}
+\newcommand{\diabased}{{\it DIA-based}}
+\newcommand{\temp}{{\it tmpl}}
+\newcommand{\search}{{\it srch}}
+\newcommand{\question}[1]{{\color{red} #1}}
+\newcommand{\new}[1]{{\color{purple} #1}}
+\newcommand{\eg}{{\it e.g.}}
+\newcommand{\ie}{{\it i.e.}}
+\newcommand{\tsne}{t-SNE}
+\newcommand{\idiff}{\ensuremath{I_\mathrm{diff}}}
+\newcommand{\itempl}{\ensuremath{I_\mathrm{tmpl}}}
+\newcommand{\isearch}{\ensuremath{I_\mathrm{srch}}}
+
+
+% \usepackage{minted}
+\usepackage[finalizecache=true, frozencache=false]{minted}
+% \usepackage[frozencache=true,cachedir=minted-cache]{minted}
+
+
+%\begin{document}
+
+% \title{temporary: Deep Learning Real-Bogus}
+
+\title[noDIA]{There's no difference: Convolutional Neural Networks for transient detection without template subtraction}
+
+
+
+% The list of authors, and the short list which is used in the headers.
+% If you need two or more lines of authors, add an extra line using \newauthor
+\author[]
+{Tatiana Acero-Cuellar$^{1, 2}$,
+%[0000-0003-1953-8727]
+{Federica B. Bianco}$^{2,3,4,5}$,
+Gregory Dobler$^{2,3,4,6}$, 
+\newauthor
+Masao Sako$^{7}$,
+%\newauthor
+Helen Qu$^{7}$ and 
+The LSST Dark Energy Science Collaboration%0000-0003-2242-0244]
+\\
+% List of institutions
+$^{1}$Observatorio Astronómio Nacional, Universidad Nacional de Colombia, Bogotá, Colombia \\
+$^{2}${University of Delaware
+Department of Physics and Astronomy
+217 Sharp Lab
+Newark, DE 19716 USA}\\
+$^{3}${University of Delaware
+Joseph R. Biden, Jr. School of Public Policy and Administration, 
+184 Academy St, Newark, DE 19716 USA}\\
+$^4${University of Delaware
+Data Science Institute}\\
+$^5${Rubin Observatory}\\
+$^6${Center for Urban Science and Progress, New York University, 
+370 Jay St, Brooklyn, NY 11201, USA}\\
+$^{7}$Department of Physics and Astronomy, University of Pennsylvania, Philadelphia, PA 19104, USA\\
+}
+
+
+% \correspondingauthor{Tatiana Acero-Cuellar}
+% \email{taceroc@unal.edu.co}
+% \author{Tatiana Acero-Cuellar}
+% \affiliation{Observatorio Astronómio Nacional, Universidad Nacional de Colombia, Bogotá, Colombia}
+% \affiliation{Department of Physics and Astronomy, University of Delaware, Newark, DE 19716-2570, USA}
+
+% \author{Federica B. Bianco}
+% \affiliation{Department of Physics and Astronomy, University of Delaware, Newark, DE 19716-2570, USA}
+% \affiliation{Biden School of Public Policy and Administration, University of Delaware, Newark, DE 19716-2570, USA}
+% \affiliation{Data Science Institute, University of Delaware, Newark, DE 19716-2570, USA}
+
+% \author{Gregory Dobler}
+% \affiliation{Biden School of Public Policy and Administration, University of Delaware, Newark, DE 19716-2570, USA}
+% \affiliation{Department of Physics and Astronomy, University of Delaware, Newark, DE 19716-2570, USA}
+% \affiliation{Data Science Institute, University of Delaware, Newark, DE 19716-2570, USA}
+% \author{Masao Sako}
+% \affiliation{Department of Physics and Astronomy, University of Pennsylvania, Philadelphia, PA 19104, USA}
+% \author{Helen Qu}
+% \affiliation{Department of Physics and Astronomy, University of Pennsylvania, Philadelphia, PA 19104, USA}
+% \author{(LSST Dark Energy Science Collaboration)}
+\date{Accepted XXX. Received YYY; in original form ZZZ}
+
+% Enter the current year, for the copyright statements etc.
+\pubyear{2021}
+
+% Don't change these lines
+\begin{document}
+\linenumbers
+\label{firstpage}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}}
+\maketitle
+
+
+\begin{abstract}
+
+We present a Convolutional Neural Network (CNN) model for the separation of astrophysical transients from image artifacts, a task known as ``real-bogus'' classification, that does not rely on Difference Image Analysis (DIA) which is a computationally expensive process involving image matching on small spatial scales in large volumes of data. We explore the use of CNNs to (1) automate the ``real-bogus'' classification, (2) reduce the computational costs of transient discovery. We compare the efficiency of two CNNs with similar architectures, one that uses ``image triplets'' (templates, search, and the corresponding difference image) and one that adopts a similar architecture but takes as input the template and search only. Without substantially changing the model architecture or retuning the hyperparameters to the new input, we observe only a small decrease in model efficiency (97\% to 92\% accuracy). We further investigate how the model that does not receive the difference image learns the required information from the template and search by exploring the saliency maps. Our work demonstrates that (1) CNNs are excellent models for ``real-bogus'' classification that rely exclusively on the imaging data and require no feature engineering task; (2) high-accuracy models can be built without the need to construct difference images. Since once trained, neural networks can generate predictions at minimal computational costs, we argue that future implementations of this methodology could dramatically reduce the computational costs in the detection of genuine transients in synoptic surveys like Rubin Observatory’s Legacy Survey of Space and Time by bypassing the DIA step entirely.
+
+%We present a Convolutional Neural Network-based model for the separation of astrophysical transients from image artifacts, a task known as ``real-bogus'' classification, that does not rely on Difference Image Analysis (DIA). \new{The process of identify astrophysical transients is currently principally based on DIA, which is a computationally expensive process involving image matching on small spatial scales for large volumes of data}. Here we investigate if machine learning could be leverage to not only automate the real-bogus classification, but to reduce the computational costs of transient discovery. We built and compared the efficiency of two models with similar architectures, one that uses ``image triplets'' composed of templates, search images, as well as the corresponding difference image, as traditionally done, and one that adopts a similar architecture but takes as input the template and search images only. We observe a small decrease in model efficiency,  accuracy reducing from 97\% to 92\% (dropping from an AUC of 0.992 to 0.973), when we remove the difference image from input, even if the model architecture is originally designed to maximize the efficiency of the model that uses image triplets as input. We further investigate what information is used by each model by exploring the models’ saliency maps (maps of pixel importance) and conclude that the model based on image triplets relies primarily on the difference image when in the presence of a genuine transient, but, much like a human classifier, needs additional information extracted from the template and search images to classify artifacts. Our work demonstrates that (1) deep neural networks are excellent models for real-bogus classification that rely exclusively on the imaging data and require no feature engineering task; (2) high-accuracy models can be built without the need to construct difference images, the most computationally expensive step in the detection of astrophysical transients. Since, once trained, neural networks can generate predictions at minimal computational costs, we argue that future implementations of this methodology could dramatically reduce the computational and human processing costs in the detection of genuine transients in synoptic surveys like Rubin Observatory’s Legacy Survey of Space and Time.
+%We trained a Convolutional Neural Network (CNN) with a input data of size $51\times102$ without difference images, and compared its performance to a model trained using the difference, search and template images.
+% We provide some interpretability to the results obtained by the CNNs models visualizing the saliency maps and quantifying the localization in the whole map of the most relevant pixels for the final classification.
+% Our work suggests that high-accuracy models can be built without the need to construct a difference images, the most computationally expensive step in the detection of transients. Future implementations of this methodology can dramatically reduce the computational and human processing costs in the detection of genuine transients in synoptic surveys like Rubin Observatory's Legacy Survey of Space and Time.
+\end{abstract}
+
+\section{Introduction} \label{sec:intro}
+\input{intro.tex}
+
+\section{state of the art and traditional solutions to detection of transients}\label{sec:stateofart}
+\input{traditionalSolutions.tex}
+
+%\newpage
+\section{Data} \label{sec:data}
+\input{data.tex}
+
+% \newpage
+\section{Methodology}\label{sec:method}
+\input{model.tex}
+
+% \newpage
+\section{Results}\label{sec:results}
+\input{result.tex}
+
+\section{Future work and limitation of this work}\label{sec:futurework}
+\input{limitations.tex}
+%\clearpage
+\section{Conclusions}\label{sec:conclusion}
+\input{conclusion.tex}
+
+\clearpage
+\section{Acknowledgment}\label{sec:thanks}
+\input{acknowledge}
+
+% \onecolumngrid
+
+\bibliographystyle{mnras}
+\bibliography{refs} 
+\appendix 
+\onecolumn
+
+%\counterwithin{figure}{section}
+%\counterwithin{table}{section}
+\section{Scaling astrophysical images for input to Neural Networks}
+\label{sec:appendixa}
+\input{appendixa.tex}
+
+% \appendix 
+
+\section{Detailed architecture of \diabased\ and \nodia\ models}
+\label{sec:appendixb}
+
+\input{appendixb.tex}
+\clearpage
+
+% \appendix 
+\section{Saliency maps for various transients}
+
+\label{sec:appendixc}
+\input{appendixc.tex}
+
+
+
+%\bibliographystyle{mnras}
+
+
+
+
+\end{document}

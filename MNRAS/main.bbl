@@ -1,0 +1,248 @@
+\begin{thebibliography}{}
+\makeatletter
+\relax
+\def\mn@urlcharsother{\let\do\@makeother \do\$\do\&\do\#\do\^\do\_\do\%\do\~}
+\def\mn@doi{\begingroup\mn@urlcharsother \@ifnextchar [ {\mn@doi@}
+  {\mn@doi@[]}}
+\def\mn@doi@[#1]#2{\def\@tempa{#1}\ifx\@tempa\@empty \href
+  {http://dx.doi.org/#2} {doi:#2}\else \href {http://dx.doi.org/#2} {#1}\fi
+  \endgroup}
+\def\mn@eprint#1#2{\mn@eprint@#1:#2::\@nil}
+\def\mn@eprint@arXiv#1{\href {http://arxiv.org/abs/#1} {{\tt arXiv:#1}}}
+\def\mn@eprint@dblp#1{\href {http://dblp.uni-trier.de/rec/bibtex/#1.xml}
+  {dblp:#1}}
+\def\mn@eprint@#1:#2:#3:#4\@nil{\def\@tempa {#1}\def\@tempb {#2}\def\@tempc
+  {#3}\ifx \@tempc \@empty \let \@tempc \@tempb \let \@tempb \@tempa \fi \ifx
+  \@tempb \@empty \def\@tempb {arXiv}\fi \@ifundefined
+  {mn@eprint@\@tempb}{\@tempb:\@tempc}{\expandafter \expandafter \csname
+  mn@eprint@\@tempb\endcsname \expandafter{\@tempc}}}
+
+\bibitem[\protect\citeauthoryear{Abadi et~al.,}{Abadi
+  et~al.}{2015}]{tensorflow2015-whitepaper}
+Abadi M.,  et~al., 2015, {TensorFlow}: Large-Scale Machine Learning on
+  Heterogeneous Systems, \url {https://www.tensorflow.org/}
+
+\bibitem[\protect\citeauthoryear{Abbott et~al.,}{Abbott
+  et~al.}{2018}]{Abbott_2018}
+Abbott T. M.~C.,  et~al., 2018, \mn@doi [The Astrophysical Journal Supplement
+  Series] {10.3847/1538-4365/aae9f0}, 239, 18
+
+\bibitem[\protect\citeauthoryear{Agarap}{Agarap}{2018}]{DBLP:journals/corr/abs-1803-08375}
+Agarap A.~F.,  2018, CoRR, abs/1803.08375
+
+\bibitem[\protect\citeauthoryear{Alard \& Lupton}{Alard \&
+  Lupton}{1998}]{Alard_1998}
+Alard C.,  Lupton R.~H.,  1998, \mn@doi [The Astrophysical Journal]
+  {10.1086/305984}, 503, 325
+
+\bibitem[\protect\citeauthoryear{{Astropy Collaboration} et~al.,}{{Astropy
+  Collaboration} et~al.}{2013}]{astropy:2013}
+{Astropy Collaboration} et~al., 2013, \mn@doi [\aap]
+  {10.1051/0004-6361/201322068}, \href
+  {http://adsabs.harvard.edu/abs/2013A%26A...558A..33A} {558, A33}
+
+\bibitem[\protect\citeauthoryear{{Astropy Collaboration} et~al.,}{{Astropy
+  Collaboration} et~al.}{2018}]{astropy:2018}
+{Astropy Collaboration} et~al., 2018, \mn@doi [\aj] {10.3847/1538-3881/aabc4f},
+  \href {https://ui.adsabs.harvard.edu/abs/2018AJ....156..123A} {156, 123}
+
+\bibitem[\protect\citeauthoryear{Bellm et~al.,}{Bellm
+  et~al.}{2018}]{Bellm_2018}
+Bellm E.~C.,  et~al., 2018, \mn@doi [Publications of the Astronomical Society
+  of the Pacific] {10.1088/1538-3873/aaecbe}, 131, 018002
+
+\bibitem[\protect\citeauthoryear{Bloom et~al.,}{Bloom
+  et~al.}{2012}]{bloom2012automating}
+Bloom J.,  et~al., 2012, Publications of the Astronomical Society of the
+  Pacific, 124, 1175
+
+\bibitem[\protect\citeauthoryear{Cabrera-Vives, Reyes, Förster, Estévez  \&
+  Maureira}{Cabrera-Vives et~al.}{2016}]{Cabrera_2016}
+Cabrera-Vives G.,  Reyes I.,  Förster F.,  Estévez P.~A.,   Maureira J.-C.,
+  2016, in 2016 International Joint Conference on Neural Networks (IJCNN). pp
+  251--258, \mn@doi{10.1109/IJCNN.2016.7727206}
+
+\bibitem[\protect\citeauthoryear{Cabrera-Vives, Reyes, Förster, Est{\'{e}}vez
+  \& Maureira}{Cabrera-Vives et~al.}{2017}]{Cabrera_Vives_2017}
+Cabrera-Vives G.,  Reyes I.,  Förster F.,  Est{\'{e}}vez P.~A.,   Maureira
+  J.-C.,  2017, \mn@doi [The Astrophysical Journal]
+  {10.3847/1538-4357/836/1/97}, 836, 97
+
+\bibitem[\protect\citeauthoryear{Carrasco-Davis et~al.,}{Carrasco-Davis
+  et~al.}{2021}]{carrascodavis2021alert}
+Carrasco-Davis R.,  et~al., 2021, Alert Classification for the ALeRCE Broker
+  System: The Real-time Stamp Classifier (\mn@eprint {arXiv} {2008.03309})
+
+\bibitem[\protect\citeauthoryear{Chollet et~al.}{Chollet
+  et~al.}{2015}]{chollet2015keras}
+Chollet F.,  et~al., 2015, Keras, \url {https://github.com/fchollet/keras}
+
+\bibitem[\protect\citeauthoryear{Deng, Dong, Socher, Li, Li  \& Fei-Fei}{Deng
+  et~al.}{2009}]{5206848}
+Deng J.,  Dong W.,  Socher R.,  Li L.-J.,  Li K.,   Fei-Fei L.,  2009, in 2009
+  IEEE Conference on Computer Vision and Pattern Recognition. pp 248--255,
+  \mn@doi{10.1109/CVPR.2009.5206848}
+
+\bibitem[\protect\citeauthoryear{Dieleman, Willett  \& Dambre}{Dieleman
+  et~al.}{2015}]{Dieleman_2015}
+Dieleman S.,  Willett K.~W.,   Dambre J.,  2015, \mn@doi [Monthly Notices of
+  the Royal Astronomical Society] {10.1093/mnras/stv632}, 450, 1441–1459
+
+\bibitem[\protect\citeauthoryear{Gabbard, Williams, Hayes  \&
+  Messenger}{Gabbard et~al.}{2018}]{PhysRevLett.120.141103}
+Gabbard H.,  Williams M.,  Hayes F.,   Messenger C.,  2018, \mn@doi [Phys. Rev.
+  Lett.] {10.1103/PhysRevLett.120.141103}, 120, 141103
+
+\bibitem[\protect\citeauthoryear{Gieseke et~al.,}{Gieseke
+  et~al.}{2017}]{Gieseke_2017}
+Gieseke F.,  et~al., 2017, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1093/mnras/stx2161}, 472, 3101–3114
+
+\bibitem[\protect\citeauthoryear{Goldstein et~al.,}{Goldstein
+  et~al.}{2015}]{Goldstein_2015}
+Goldstein D.~A.,  et~al., 2015, \mn@doi [The Astronomical Journal]
+  {10.1088/0004-6256/150/3/82}, 150, 82
+
+\bibitem[\protect\citeauthoryear{Gunn et~al.,}{Gunn et~al.}{2006}]{Gunn_2006}
+Gunn J.~E.,  et~al., 2006, \mn@doi [The Astronomical Journal] {10.1086/500975},
+  131, 2332–2359
+
+\bibitem[\protect\citeauthoryear{Hambleton et~al.,}{Hambleton
+  et~al.}{2020}]{Hambleton_2020}
+Hambleton K.,  et~al., 2020, \mn@doi [Research Notes of the {AAS}]
+  {10.3847/2515-5172/ab8129}, 4, 40
+
+\bibitem[\protect\citeauthoryear{Hanley \& McNeil}{Hanley \&
+  McNeil}{1983}]{hanley1983method}
+Hanley J.~A.,  McNeil B.~J.,  1983, Radiology, 148, 839
+
+\bibitem[\protect\citeauthoryear{Harris et~al.,}{Harris
+  et~al.}{2020}]{harris2020array}
+Harris C.~R.,  et~al., 2020, \mn@doi [Nature] {10.1038/s41586-020-2649-2}, 585,
+  357
+
+\bibitem[\protect\citeauthoryear{Hern{\'a}ndez-Orallo, Flach  \&
+  Ferri~Ram{\'\i}rez}{Hern{\'a}ndez-Orallo et~al.}{2012}]{hernandez2012unified}
+Hern{\'a}ndez-Orallo J.,  Flach P.,   Ferri~Ram{\'\i}rez C.,  2012, Journal of
+  Machine Learning Research, 13, 2813
+
+\bibitem[\protect\citeauthoryear{Ho}{Ho}{1995}]{ho1995random}
+Ho T.~K.,  1995, in Proceedings of 3rd international conference on document
+  analysis and recognition. pp 278--282
+
+\bibitem[\protect\citeauthoryear{Hunter}{Hunter}{2007}]{Hunter:2007}
+Hunter J.~D.,  2007, \mn@doi [Computing in Science \& Engineering]
+  {10.1109/MCSE.2007.55}, 9, 90
+
+\bibitem[\protect\citeauthoryear{{Ivezi{\'c}} et~al.,}{{Ivezi{\'c}}
+  et~al.}{2019a}]{lsst}
+{Ivezi{\'c}} {\v{Z}}.,  et~al., 2019a, \mn@doi [\apj]
+  {10.3847/1538-4357/ab042c}, \href
+  {https://ui.adsabs.harvard.edu/abs/2019ApJ...873..111I} {873, 111}
+
+\bibitem[\protect\citeauthoryear{Ivezi{\'c} et~al.,}{Ivezi{\'c}
+  et~al.}{2019b}]{ivezic2019lsst}
+Ivezi{\'c} {\v{Z}}.,  et~al., 2019b, The Astrophysical Journal, 873, 111
+
+\bibitem[\protect\citeauthoryear{Kessler et~al.,}{Kessler
+  et~al.}{2015}]{Kessler_2015}
+Kessler R.,  et~al., 2015, \mn@doi [The Astronomical Journal]
+  {10.1088/0004-6256/150/6/172}, 150, 172
+
+\bibitem[\protect\citeauthoryear{Kim \& Brunner}{Kim \&
+  Brunner}{2016}]{Kim_2016}
+Kim E.~J.,  Brunner R.~J.,  2016, \mn@doi [Monthly Notices of the Royal
+  Astronomical Society] {10.1093/mnras/stw2672}, 464, 4463–4475
+
+\bibitem[\protect\citeauthoryear{Krizhevsky, Sutskever  \& Hinton}{Krizhevsky
+  et~al.}{2012}]{10.5555/2999134.2999257}
+Krizhevsky A.,  Sutskever I.,   Hinton G.~E.,  2012, in Proceedings of the 25th
+  International Conference on Neural Information Processing Systems - Volume 1.
+  NIPS'12.
+Curran Associates Inc., Red Hook, NY, USA, p. 1097–1105
+
+\bibitem[\protect\citeauthoryear{LeCun et~al.}{LeCun
+  et~al.}{1989}]{lecun1989generalization}
+LeCun Y.,  et~al., 1989, Connectionism in perspective, 19, 143
+
+\bibitem[\protect\citeauthoryear{LeCun, Bengio  \& Hinton}{LeCun
+  et~al.}{2015}]{LeCun_Bengio_Hinton_2015}
+LeCun Y.,  Bengio Y.,   Hinton G.,  2015, \mn@doi [Nature]
+  {10.1038/nature14539}, 521, 436–444
+
+\bibitem[\protect\citeauthoryear{LeNail}{LeNail}{2019}]{LeNail2019}
+LeNail A.,  2019, \mn@doi [Journal of Open Source Software]
+  {10.21105/joss.00747}, 4, 747
+
+\bibitem[\protect\citeauthoryear{Liu et~al.,}{Liu et~al.}{2019}]{Liu_2019}
+Liu W.,  et~al., 2019, \mn@doi [Research in Astronomy and Astrophysics]
+  {10.1088/1674-4527/19/3/42}, 19, 042
+
+\bibitem[\protect\citeauthoryear{{Mahabal} et~al.,}{{Mahabal}
+  et~al.}{2019}]{2019PASP..131c8002M}
+{Mahabal} A.,  et~al., 2019, \mn@doi [\pasp] {10.1088/1538-3873/aaf3fa}, \href
+  {https://ui.adsabs.harvard.edu/abs/2019PASP..131c8002M} {131, 038002}
+
+\bibitem[\protect\citeauthoryear{Mong et~al.,}{Mong et~al.}{2020}]{Mong_2020}
+Mong Y.-L.,  et~al., 2020, \mn@doi [Monthly Notices of the Royal Astronomical
+  Society] {10.1093/mnras/staa3096}, 499, 6009–6017
+
+\bibitem[\protect\citeauthoryear{Nielsen}{Nielsen}{2015}]{nielsen_NN}
+Nielsen M.~A.,  2015, Neural Network and Deep Learning.
+Determination Press
+
+\bibitem[\protect\citeauthoryear{Richards, Peters, Martin  \& Bauer}{Richards
+  et~al.}{2018}]{richards2018leveraging}
+Richards G.,  Peters C.,  Martin B.,   Bauer F.~E.,  2018
+
+\bibitem[\protect\citeauthoryear{Simonyan, Vedaldi  \& Zisserman}{Simonyan
+  et~al.}{2014}]{simonyan2014deep}
+Simonyan K.,  Vedaldi A.,   Zisserman A.,  2014, Deep Inside Convolutional
+  Networks: Visualising Image Classification Models and Saliency Maps
+  (\mn@eprint {arXiv} {1312.6034})
+
+\bibitem[\protect\citeauthoryear{Sánchez et~al.,}{Sánchez
+  et~al.}{2019}]{S_nchez_2019}
+Sánchez B.,  et~al., 2019, \mn@doi [Astronomy and Computing]
+  {10.1016/j.ascom.2019.05.002}, 28, 100284
+
+\bibitem[\protect\citeauthoryear{{The Dark Energy Survey Collaboration}}{{The
+  Dark Energy Survey Collaboration}}{2005}]{DES}
+{The Dark Energy Survey Collaboration} 2005, arXiv e-prints, \href
+  {https://ui.adsabs.harvard.edu/abs/2005astro.ph.10346T} {pp
+  astro--ph/0510346}
+
+\bibitem[\protect\citeauthoryear{Tomaney \& Crotts}{Tomaney \&
+  Crotts}{1996}]{Tomaney_1996}
+Tomaney A.~B.,  Crotts A. P.~S.,  1996, \mn@doi [The Astronomical Journal]
+  {10.1086/118228}, 112, 2872
+
+\bibitem[\protect\citeauthoryear{Wardęga, Zadrożny, Beroiz, Camuccio  \&
+  Díaz}{Wardęga et~al.}{2020}]{wardega2020detecting}
+Wardęga K.,  Zadrożny A.,  Beroiz M.,  Camuccio R.,   Díaz M.~C.,  2020,
+  Detecting optical transients using artificial neural networks and reference
+  images from different surveys (\mn@eprint {arXiv} {2009.14614})
+
+\bibitem[\protect\citeauthoryear{Waskom}{Waskom}{2021}]{Waskom2021}
+Waskom M.~L.,  2021, \mn@doi [Journal of Open Source Software]
+  {10.21105/joss.03021}, 6, 3021
+
+\bibitem[\protect\citeauthoryear{{W}es {M}c{K}inney}{{W}es
+  {M}c{K}inney}{2010}]{mckinney-proc-scipy-2010}
+{W}es {M}c{K}inney 2010, in {S}t\'efan van~der {W}alt {J}arrod {M}illman eds,
+  {P}roceedings of the 9th {P}ython in {S}cience {C}onference. pp 56 -- 61,
+  \mn@doi{10.25080/Majora-92bf1922-00a}
+
+\bibitem[\protect\citeauthoryear{Zackay \& Ofek}{Zackay \&
+  Ofek}{2017}]{Zackay_2017}
+Zackay B.,  Ofek E.~O.,  2017, \mn@doi [The Astrophysical Journal]
+  {10.3847/1538-4357/836/2/188}, 836, 188
+
+\bibitem[\protect\citeauthoryear{pandas~development team}{pandas~development
+  team}{2020}]{reback2020pandas}
+pandas~development team T.,  2020, pandas-dev/pandas: Pandas,
+  \mn@doi{10.5281/zenodo.3509134}, \url
+  {https://doi.org/10.5281/zenodo.3509134}
+
+\makeatother
+\end{thebibliography}

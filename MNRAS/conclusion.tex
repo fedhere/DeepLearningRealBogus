@@ -1,0 +1,11 @@
+
+
+In this work, we have demonstrated that high-accuracy models for classifying true astrophysical transients from artifacts and moving objects (a task generally known as ``real-bogus'') can be built without leveraging the results of a difference image analysis (DIA) pipeline that constructs a ``template-subtracted'' image.
+
+Starting from the Dark Energy Survey dataset that supported the creation of the well known real-bogus \texttt{autoscan} model \citep{Goldstein_2015}, we first built a CNN-based model, dubbed \diabased, that uses a sky template (\temp), a nightly image (\search), and a template-subtracted version of the nightly image (\diff) that performs real-bogus classification at the level of state-of-the art models.  Our \diabased\ model reaches a state-of-the art $97\%$ accuracy in the bogus classification with an Area-Under-the-Curve of 0.992 and does not require human decision in the feature engineering or extraction phase.
+
+We then created \nodia, a model which uses only the \temp\ and \search\ images and can extract information that enables the identification of bogus transients with $92\%$ accuracy even with a naive model architecture that, to enable a direct comparison, is purposefully designed to be minimally different from our high accuracy \diabased\ model.
+
+We further investigated what information enables the real-bogus classification in both the \diabased\ and \nodia\ models and demonstrated that a CNN trained with the DIA output primarily uses the information in the \diff\ image to make the final classification, and that the model examines a \diff-\search-\temp\ image-set fundamentally differently in the cases where there is a transient, than in the cases where there is not one. The \nodia\ model, conversely, takes a more comprehensive look at both \temp\ and \search\ images, but relies primarily on \temp\ to enable the reconstruction of the information found in the \diff.
+
+Implementation of this methodology in future surveys could reduce the time and computational cost required for classifying transients by entirely omitting the construction of the difference images.  

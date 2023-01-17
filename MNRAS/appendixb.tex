@@ -1,0 +1,46 @@
+
+
+
+
+We designed a network of 12 layers using \mintinline{c}/tensorflow.keras/in python, for the \diabased\ case as follows:
+\vspace{1cm}
+
+%\begin{figure*}[H]
+\begin{minted}{python}
+layer1 = keras.layers.Conv2D(16, kernel_size=(5, 5), padding="valid", activation="relu", 
+                             input_shape=(51,153,1))
+layer2 = keras.layers.MaxPooling2D((2, 2), strides=2)
+layer3 = keras.layers.Dropout(0.4)
+layer4 = keras.layers.Conv2D(32, kernel_size=(5, 5), padding="valid", activation="relu")
+layer5 = keras.layers.MaxPooling2D((2, 2), strides=2)
+layer6 = keras.layers.Dropout(0.4)
+layer7 = keras.layers.Conv2D(64, kernel_size=(5, 5), padding="valid", activation="relu")
+layer8 = keras.layers.MaxPooling2D((2, 2), strides=2)
+layer9 = keras.layers.Dropout(0.4)
+layer10 = keras.layers.Flatten()
+layer11 = keras.layers.Dense(32, activation="relu")
+layer12 = keras.layers.Dense(2, activation="softmax")
+\end{minted}
+%\end{figure*}
+\FloatBarrier
+
+\vspace{1cm}
+
+\noindent and a network of 11 layers using  \mintinline{c}/tensorflow.keras/in python, for the \nodia\ case as follows:
+\vspace{1cm}
+
+\begin{minted}{python}
+layer1 = keras.layers.Conv2D(1, kernel_size=(7, 7), padding="valid", activation="relu", 
+                             input_shape=(51,102,1))
+layer2 = keras.layers.MaxPooling2D((2, 2), strides=2)
+layer3 = keras.layers.Conv2D(16, kernel_size=(3, 3), padding="valid", activation="relu")
+layer4 = keras.layers.MaxPooling2D((2, 2), strides=2)
+layer5 = keras.layers.Dropout(0.4)
+layer6 = keras.layers.Conv2D(32, kernel_size=(3, 3), padding="valid", activation="relu")
+layer7 = keras.layers.MaxPooling2D((2, 2), strides=2)
+layer8 = keras.layers.Dropout(0.4)
+layer9 = keras.layers.Flatten()
+layer10 = keras.layers.Dense(32, activation="relu")
+layer11 = keras.layers.Dense(2, activation="softmax")
+\end{minted}
+To compile the models we used the optimizer \mintinline{c}/SGD/ (stochastic gradient descent) with a \mintinline{c}/learning_rate=0.01/ the \mintinline{c}/"sparse_categorical_crossentropy"/ loss function and the \mintinline{c}/"accuracy"/ metric. Our models are available in a dedicated GitHub repository \footnote{\url{https://github.com/taceroc/DIA_noDIA}.}
